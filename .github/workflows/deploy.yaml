@@ -4,14 +4,9 @@ on:
     branches:
       - 'main'
 
-defaults:
-  run:
-     working-directory: belalang_web 
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: production
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -46,5 +41,3 @@ jobs:
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           projectName: ${{ secrets.CF_PROJECT_NAME }}
           directory: dist
-          workingDirectory: belalang_web
-
