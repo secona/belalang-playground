@@ -25,7 +25,7 @@ pub fn run_code(input: String) {
     };
 
     let mut compiler = CompilerBuilder::default().build();
-    let mut code = match compiler.compile_program(program) {
+    let code = match compiler.compile_program(program) {
         Ok(code) => code,
         Err(err) => {
             println(&format!("Compile Error: {}", err));
@@ -47,8 +47,7 @@ pub fn run_code(input: String) {
         .build();
 
     let mut vm = VMBuilder::default().builtin_collection(bc).build();
-    vm.append_code(&mut code);
-    if let Err(err) = vm.run() {
+    if let Err(err) = vm.run(code) {
         println(&format!("Runtime Error: {}", err));
     }
 }

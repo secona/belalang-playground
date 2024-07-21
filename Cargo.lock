@@ -5,7 +5,7 @@ version = 3
 [[package]]
 name = "belalang_comp"
 version = "0.1.0"
-source = "git+https://github.com/secona/belalang?rev=fa59beb4bfd0873d03119b2b5739c777848080aa#fa59beb4bfd0873d03119b2b5739c777848080aa"
+source = "git+https://github.com/secona/belalang?rev=0616819fd2474631ea777743921ff5eddd598842#0616819fd2474631ea777743921ff5eddd598842"
 dependencies = [
  "belalang_core",
  "belalang_vm",
@@ -15,7 +15,7 @@ dependencies = [
 [[package]]
 name = "belalang_core"
 version = "0.1.0"
-source = "git+https://github.com/secona/belalang?rev=fa59beb4bfd0873d03119b2b5739c777848080aa#fa59beb4bfd0873d03119b2b5739c777848080aa"
+source = "git+https://github.com/secona/belalang?rev=0616819fd2474631ea777743921ff5eddd598842#0616819fd2474631ea777743921ff5eddd598842"
 dependencies = [
  "thiserror",
 ]
@@ -33,7 +33,7 @@ dependencies = [
 [[package]]
 name = "belalang_vm"
 version = "0.1.0"
-source = "git+https://github.com/secona/belalang?rev=fa59beb4bfd0873d03119b2b5739c777848080aa#fa59beb4bfd0873d03119b2b5739c777848080aa"
+source = "git+https://github.com/secona/belalang?rev=0616819fd2474631ea777743921ff5eddd598842#0616819fd2474631ea777743921ff5eddd598842"
 dependencies = [
  "indexmap",
  "thiserror",
