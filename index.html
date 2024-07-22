@@ -9,10 +9,13 @@
     <nav>
       <h1>belalang</h1>
       <button onclick="runCode()">run</button>
-      <button onclick="clearConsole()">clear</button>
+      <button onclick="clearConsole()">clear log</button>
       <select id="example-selector" onchange="exampleSelector()">
         <option disabled selected value="none">-- examples --</option>
       </select>
+      <a href="https://github.com/secona/belalang" target="_blank" rel="noopener noreferrer">
+        GitHub
+      </a>
     </nav>
     <main>
       <div id="editor"></div>
@@ -22,9 +25,12 @@
       </div>
     </main>
     <footer>
-      <a href="https://secona.dev" target="_blank" rel="noopener noreferrer">
-        secona.dev
-      </a>
+      <span>
+        Made with &hearts; by 
+        <a href="https://secona.dev" target="_blank" rel="noopener noreferrer">
+          secona.dev
+        </a>
+      </span>
     </footer>
     <script type="module" src="/src/main.ts"></script>
   </body>

@@ -8,6 +8,7 @@ body, button, select, option {
 nav {
   display: flex;
   flex-direction: row;
+  align-items: stretch;
   gap: 1rem;
   padding: 1rem;
 }
