@@ -9,7 +9,7 @@ license = "Apache-2.0"
 crate-type = ["cdylib"]
 
 [dependencies]
-belalang_core = { git = "https://github.com/secona/belalang", rev = "0616819fd2474631ea777743921ff5eddd598842" }
-belalang_comp = { git = "https://github.com/secona/belalang", rev = "0616819fd2474631ea777743921ff5eddd598842" }
-belalang_vm = { git = "https://github.com/secona/belalang", rev = "0616819fd2474631ea777743921ff5eddd598842" }
+belalang_core = { git = "https://github.com/secona/belalang", rev = "014ac72d169754f29b7fe0dafaff16a582de4792" }
+belalang_comp = { git = "https://github.com/secona/belalang", rev = "014ac72d169754f29b7fe0dafaff16a582de4792" }
+belalang_vm = { git = "https://github.com/secona/belalang", rev = "014ac72d169754f29b7fe0dafaff16a582de4792" }
 wasm-bindgen = "0.2.92"

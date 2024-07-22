@@ -78,7 +78,7 @@ function exampleSelector() {
 (window as any).exampleSelector = exampleSelector;
 
 const examples: Record<string, string> = {
-  "Hello World": `println("Hello, World!");`,
+  "Hello World": `print("Hello, World!");`,
 
   "Variables": `# Declare variables using the \`:=\` operator
 # Currently, Belalang only supports integers, floats, and strings
@@ -86,10 +86,10 @@ int_var := 123;
 flo_var := 44.2;
 str_var := "Hello, World!";
 
-# Print variables to the console using the builtin \`println\` function
-println("the value of int_var is", int_var);
-println("the value of flo_var is", flo_var);
-println("the value of str_var is", str_var);
+# Print variables to the console using the builtin \`print\` function
+print(int_var);
+print(flo_var);
+print(str_var);
 
 # Assign new values to existing variables using the \`=\` operator
 int_var = 1;
@@ -97,33 +97,33 @@ flo_var = 1.4;
 str_var = "Hello, Mom!";
 
 # Print the new values of the variables
-println("the new value of int_var is", int_var);
-println("the new value of flo_var is", flo_var);
-println("the new value of str_var is", str_var);`,
+print(int_var);
+print(flo_var);
+print(str_var);`,
 
   "If-Else If-Else": `# Variable declaration and assignment
 price := 50;
 
 # Conditional statement example
-if (price < 30) {
-    println("very cheap");
+if price < 30 {
+    print("very cheap");
 } else if (price < 40) {
-    println("not so cheap");
+    print("not so cheap");
 } else {
-    println("very not cheap");
+    print("very not cheap");
 }
 
 # Using if as an expression
-status := if (price < 30) {
+status := if price < 30 {
     "very cheap"
-} else if (price < 40) {
+} else if price < 40 {
     "not so cheap"
 } else {
     "very not cheap"
 };
 
 # Print the status
-println(status);`,
+print(status);`,
 
   "Functions": `# Functions are declared like variables using the \`fn\` keyword
 # Define a function to add two numbers
@@ -132,40 +132,20 @@ add := fn(x, y) {
 };
 
 # Call the add function and print the result
-println("1 + 2 =", add(1, 2));
+print(add(1, 2));
 
 # You can also take advantage of expressions to return values
 # Define a function to multiply two numbers using an expression
 mul := fn(x, y) { x * y };
 
 # Call the mul function and print the result
-println("3 * 4 =", mul(3, 4));`,
+print(mul(3, 4));`,
 
   "While Loops": `# While loops are declared with the \`while\` keyword.
 i := 0;
-while (i < 10) {
-  println("i =", i);
+while i < 10 {
+  print(i);
   i = i + 1;
-}`,
-
-  "Closures": `# Closures!
-adder := fn() {
-  sum := 0;
-  return fn(n) {
-    sum = sum + n;
-    return sum;
-  };
-};
-
-# Each instance of adder has different
-# values of sum
-f := adder();
-g := adder();
-
-x := 1;
-while (x < 10) {
-  println("f =", f(1), "| g =", g(2));
-  x = x + 1;
 }`,
 
   "Factorial": `# Recursions!
@@ -179,7 +159,7 @@ fact := fn(n) {
   return n * fact(n - 1);
 };
 
-println("5! =", fact(5));`
+print(fact(5));`
 }
 
 const exampleSelectorEl = document.getElementById("example-selector")! as HTMLSelectElement;
