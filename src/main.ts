@@ -1,5 +1,5 @@
 import './main.css'
-import * as rs from "rs";
+import * as rs from "belalang-playground";
 
 import { closeBrackets, closeBracketsKeymap } from '@codemirror/autocomplete';
 import { defaultKeymap, history, historyKeymap, indentWithTab } from '@codemirror/commands';
