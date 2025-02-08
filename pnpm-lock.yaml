@@ -24,8 +24,8 @@ importers:
         specifier: ^6.28.0
         version: 6.28.0
       belalang-playground:
-        specifier: file:pkg
-        version: belalang_playground@file:pkg
+        specifier: file:belalang-playground/pkg
+        version: belalang_playground@file:belalang-playground/pkg
     devDependencies:
       typescript:
         specifier: ^5.2.2
@@ -376,8 +376,8 @@ packages:
   '@types/estree@1.0.5':
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
 
-  belalang_playground@file:pkg:
-    resolution: {directory: pkg, type: directory}
+  belalang_playground@file:belalang-playground/pkg:
+    resolution: {directory: belalang-playground/pkg, type: directory}
 
   esbuild@0.20.2:
     resolution: {integrity: sha512-WdOOppmUNU+IbZ0PaDiTst80zjnrOkyJNHoKupIcVyU8Lvla3Ugx94VzkQ32Ijqd7UhHJy75gNWDMUekcrSJ6g==}
@@ -681,7 +681,7 @@ snapshots:
 
   '@types/estree@1.0.5': {}
 
-  belalang_playground@file:pkg: {}
+  belalang_playground@file:belalang-playground/pkg: {}
 
   esbuild@0.20.2:
     optionalDependencies:
