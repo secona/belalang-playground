@@ -1,21 +1,95 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap');
+
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --border: #e5e7eb;
+  --bg-subtle: #f3f4f6;
+  --bg-subtle-hover: #e5e7eb;
+  --white: #ffffff;
+}
 
 body, button, select, option {
-  font-family: "Space Grotesk";
+  font-family: "Space Grotesk", sans-serif;
 }
 
 nav {
   display: flex;
-  flex-direction: row;
-  align-items: stretch;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
   gap: 1rem;
-  padding: 1rem;
 }
 
 h1 {
   margin: 0;
   padding: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+button, select {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background-color: var(--bg-subtle);
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+button:hover {
+  background-color: var(--bg-subtle-hover);
+}
+
+button.primary {
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+}
+
+button.primary:hover {
+  background-color: var(--primary-hover);
+}
+
+select {
+  min-width: 140px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%234b5563' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  padding-right: 2.5rem;
+}
+
+.github-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--text-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  background-color: transparent;
+}
+
+.github-link:hover {
+  background-color: var(--bg-subtle);
+  color: var(--text-primary);
 }
 
 body {
@@ -43,7 +117,7 @@ main #editor {
 
 main #handle {
   width: 0.5rem;
-  background-color: #efefef;
+  background-color: var(--border);
   cursor: e-resize;
 }
 
@@ -54,7 +128,21 @@ main #out-wrapper {
 }
 
 footer {
-  padding: 0.3rem;
+  padding: 0.75rem 1.5rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+footer a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: var(--primary-hover);
 }
 
 /* CodeMirror styles */
