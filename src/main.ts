@@ -8,13 +8,12 @@ class App {
   private editor: Editor;
   private console: ConsoleOutput;
   private examples: CodeExamples;
-  private resizablePanel: ResizablePanel;
 
   constructor() {
     this.editor = new Editor(`print("Hello, World!");`);
     this.console = new ConsoleOutput();
     this.examples = new CodeExamples(this.editor);
-    this.resizablePanel = new ResizablePanel();
+    new ResizablePanel();
     this.exposeGlobalFunctions();
   }
 
